@@ -2,7 +2,7 @@
   "name": "salary-service",
   "version": "1.0.0",
   "description": "salary management",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "jest --watchAll",
     "dev": "nodemon ./app",
