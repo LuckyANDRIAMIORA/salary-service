@@ -1,5 +1,5 @@
 # Step 1: Use a Node.js base image
-FROM node:18.14.2
+FROM node:20-alpine
 
 # Step 2: Set the working directory
 WORKDIR /app
@@ -16,8 +16,10 @@ COPY . /app
 # Step 6: Generate Prisma client
 RUN npx prisma generate
 
+RUN npx prisma migrate deploy
+
 # Step 7: Expose the port the app runs on
-EXPOSE 3000
+EXPOSE 3003
 
 # Step 8: Define the command to run the app
 CMD ["npm", "run","start"]
